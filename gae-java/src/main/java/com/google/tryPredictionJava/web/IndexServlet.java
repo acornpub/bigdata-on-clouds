@@ -1,5 +1,4 @@
 /*
- * Copyright 2012 Google Inc.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -12,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * 
- * Author: Marc Cohen
+ * Author: sstrato.kong
  *
  */
 
@@ -50,14 +49,15 @@ import org.slf4j.LoggerFactory;
 
 public class IndexServlet extends HttpServlet {
 
-  // This URL needs to be configured to match the domain name
-  // at which this servel will be deployed.
+// 사용자가 사용할 서버의 주소. 로컬에서 테스트를 수행할 경우 아래와 같이 localhost를 적어 주도록 한다. 
   public static final String redirectUri = 
-    "http://try-prediction-java.appspot.com/auth_return";
+    "http://localhost:8888/oauth2callback";
 
-  public static final String modelsFile = "rc/models.json";
-  public static final String secretsFile = "rc/client_secrets.json";
 
+  public static final String modelsFile = "rc/models.json";//사용할 모델의 설명파
+  public static final String secretsFile = "rc/client_secrets.json";//사용자의 인증정보 파일. 
+
+  //인증을 통해 사용할 API의 종류를 기록하는곳. 
   public static final String scope =
     "https://www.googleapis.com/auth/devstorage.read_write " +
     "https://www.googleapis.com/auth/prediction";

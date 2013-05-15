@@ -1,6 +1,6 @@
 {
   "Language Detection" : {
-    "model_id"    : "languages",
+    "model_id"    : "123456",
     "user_list"   : {},
     "description" : "This model infers the language of text input.",
     "fields"      : [

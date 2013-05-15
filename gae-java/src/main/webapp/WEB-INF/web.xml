@@ -24,7 +24,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>AuthReturnServlet</servlet-name>
-        <url-pattern>/auth_return</url-pattern>
+        <url-pattern>/oauth2callback</url-pattern>
     </servlet-mapping>
 
     <servlet>
